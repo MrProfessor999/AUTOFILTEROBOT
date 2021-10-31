@@ -81,7 +81,7 @@ async def start(client, message):
             await db.add_user(message.from_user.id, message.from_user.first_name)
         return
     file_id = message.command[1]
-    files = (await get_file_details(file_id))[0]
+    files = (await get_file_details(file_id))[100]
     title = files.file_name
     size=get_size(files.file_size)
     f_caption=files.caption
